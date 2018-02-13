@@ -5,9 +5,9 @@ import {uuid} from './uuid'
 export const counters = []
 
 export class Counter extends Component {
-  constructor (opts) {
-    super(opts)
-  }
+
+  container = '#counters'
+  state = {disabled: false, number: 1, id: uuid()}
 
   render(data) {
     const {disabled, number} = data
